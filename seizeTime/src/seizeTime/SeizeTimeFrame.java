@@ -13,10 +13,8 @@ import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JLabel;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.Iterator;
-import java.util.List;
+
 import java.util.Set;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -24,8 +22,6 @@ import java.util.concurrent.TimeUnit;
 
 import javax.swing.SwingConstants;
 import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.JComboBox;
 import java.awt.Color;
@@ -205,7 +201,7 @@ public class SeizeTimeFrame {
 	}
 	
 	public void addComboBoxCountry(JComboBox<String> comboBox, SeizeTimeData timeData) {
-		Set<String> keys = timeData.getTreeMap().keySet();
+		Set<String> keys = SeizeTimeData.getTreeMap().keySet();
 		String countryString = "";
 	    //Obtaining iterator over set entries
 	    Iterator<String> itr = keys.iterator();
